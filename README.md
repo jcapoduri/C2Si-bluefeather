@@ -4,11 +4,11 @@ Use at your own risk
 
 HTML5 boilerplate to start a project inside C2Si
 it use:
-Modernizr
-Backbone
-Handlebars
-Bootstrap
-JQuery
-Underscore
+* Modernizr
+* Backbone
+* Handlebars
+* Bootstrap
+* JQuery
+* Underscore
 
-All is compiled with Lumbar
+All is compiled with Lumbar (http://walmartlabs.github.com/lumbar/)
