@@ -50,7 +50,7 @@
     "mobile": {
       "platforms": [ "mobile" ],
       "modules": [ "base" ],
-      "combine": true
+      "combine": false
     }
   }
 }
