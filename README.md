@@ -11,4 +11,4 @@ it use:
 * JQuery
 * Underscore
 
-All is compiled with Lumbar (http://walmartlabs.github.com/lumbar/)
+All is compiled with Grunt (https://github.com/gruntjs/grunt)
