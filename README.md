@@ -1,14 +1,4 @@
-[C2Si] HTML5 boilerplate
+[C2Si] Blue Feather
 ================
 Use at your own risk
 
-HTML5 boilerplate to start a project inside C2Si
-it use:
-* Modernizr
-* Backbone
-* Handlebars
-* Bootstrap
-* JQuery
-* Underscore
-
-All is compiled with Grunt (https://github.com/gruntjs/grunt)
