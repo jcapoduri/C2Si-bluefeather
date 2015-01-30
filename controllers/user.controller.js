@@ -1,3 +1,7 @@
-module.exports.set = function(app) {
-   app.get('/user')
-}
+"use strict"
+
+//function 
+
+module.exports = {
+
+};

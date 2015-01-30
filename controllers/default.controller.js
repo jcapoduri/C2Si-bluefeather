@@ -1,24 +1,27 @@
 "use strict"
 
-module.exports.set = function (opts, callback) {
-  var ownModel = opts.model,
-      sequelize = opts.sequelize;
+var models = require('../models'),
+    currentModel = null;
 
-  function getAll() {};
+function getAll() {
+  if (!currentModel) return [];
+  
+};
 
-  function getById(id) {};
+function getById(id) {};
+function post(jsondata) {};
+function put(id, jsondata) {};
+function deleteItem(id) {};
 
-  function post(jsondata) {};
+function setCurrentModel (modelname) {
+  currentModel = modelname
+};
 
-  function put(id, jsondata) {};
-
-  function deleteItem(id) {};
-
-  return {
-    getAll: getAll,
-    getById: getById,
-    post: post,
-    put: put,
-    deleteItem: deleteItem
-  };
+module.exports = {
+  getAll: getAll,
+  getById: getById,
+  post: post,
+  put: put,
+  deleteItem: deleteItem,
+  setModel: setCurrentModel
 };
