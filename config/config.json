@@ -1,16 +1,16 @@
 {
-  "development": {
+  "test": {
     "username": "shaka",
     "password": "abcd1234",
     "database": "shaka_bluesystem",
     "host": "c2si.com.ar",
     "dialect": "mysql"
   },
-  "test": {
+  "development": {
     "username": "root",
-    "password": null,
-    "database": "database_test",
-    "host": "127.0.0.1",
+    "password": "",
+    "database": "bluesystem",
+    "host": "localhost",
     "dialect": "mysql"
   },
   "production": {
