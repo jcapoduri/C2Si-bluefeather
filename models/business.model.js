@@ -29,10 +29,10 @@ module.exports = function(sequelize, DataTypes) {
     underscored: true,
     classMethods: {
       associate: function(models) {
-        Business.hasMany(models.Job);
-        Business.hasMany(models.User);
-        Business.hasMany(models.Ringing);
-        Business.hasMany(models.Book);
+        Business.hasMany(models.Job, {as: 'Jobs'});
+        Business.hasMany(models.User, {as: 'Users'});
+        Business.hasMany(models.Ringing, {as: 'Ringings'});
+        Business.hasMany(models.Book, {as: 'Books'});
       }
     }
   });

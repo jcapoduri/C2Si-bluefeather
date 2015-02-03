@@ -4,7 +4,9 @@ module.exports.set = function (opts, callback) {
   var ownModel = opts.model,
       sequelize = opts.sequelize;
 
-  function getAll() {};
+  function getAll() {
+    return ownModel;
+  };
 
   function getById(id) {};
 

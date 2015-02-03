@@ -12,21 +12,13 @@ module.exports = function(sequelize, DataTypes) {
     active: DataTypes.BOOLEAN,
     admin: DataTypes.BOOLEAN
   }, {
-    // don't add the timestamp attributes (updatedAt, createdAt)
     timestamps: false,
- 
-    // don't delete database entries but set the newly added attribute deletedAt
-    // to the current date (when deletion was done). paranoid will only work if
-    // timestamps are enabled
     paranoid: true,
- 
-    // don't use camelcase for automatically added attributes but underscore style
-    // so updatedAt will be updated_at
     underscored: true,
     classMethods: {
       associate: function(models) {
-        console.log(User.belongsToOne);
         User.belongsTo(models.Job);
+        User.belongsToMany(models.Business, {through: 'BusinessUser'});
       }
     }
   });

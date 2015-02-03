@@ -14,11 +14,13 @@ fs
     db.push(model);
   });
 
-module.exports.set = function (app, options) {
+module.exports.set = function (router, options) {
   var i,
       len = db.length;
 
   for (i = 0; i < len; i++) {
-    db[i].set(app);
+    db[i].set(router, options);
   };
+
+  return router;
 };

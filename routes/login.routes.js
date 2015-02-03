@@ -1,13 +1,13 @@
-module.exports.set = function (app, controllers) {
-  app.post('/api/login', function (req, res) {
+module.exports.set = function (router, controllers) {
+  router.post('/login', function (req, res) {
 
   });
 
-  app.post('/api/logout/:token', function (req, res) {
+  router.post('/logout/:token', function (req, res) {
 
   });
 
-  app.post('/api/singup', function (req, res) {
+  router.post('/singup', function (req, res) {
 
   });
 

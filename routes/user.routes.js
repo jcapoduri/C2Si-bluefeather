@@ -1,17 +1,20 @@
-module.exports.set = function (app, controllers) {
-  app.get('/api/user', function (req, res) {
+module.exports.set = function (router, models) {
+  router.get('/user', function (req, res) {
 
   });
 
-  app.get('/api/user/:id', function (req, res) {
+  router.get('/user/:id', function (req, res) {
 
   });
 
-  app.post('/api/user', function (req, res) {
-
+  router.post('/user', function (req, res) {
+    var User = models.User;
+    User.create(req.body).then(function (user) {
+      
+    });
   });
 
-  app.put('/api/user/:id', function (req, res) {
+  router.put('/user/:id', function (req, res) {
 
   });
 }
