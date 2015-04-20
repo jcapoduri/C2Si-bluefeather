@@ -11,13 +11,13 @@ var routes  =       require('./routes');
 app.set('port', process.env.PORT || 3000);
 
 // parse application/json
-app.use(bodyParser.json())
+app.use(bodyParser.json());
 
-app.get('/', function (req, res) {
-  res.send('Hello World!')
-});
+//static content
+app.use('/', express.static(__dirname + '/mockups'));
 
-models.sequelize.sync({force: true}).then(function () {
+
+models.sequelize.sync(/*{force: true}*/).then(function () {
   var paths = routes.set(router, models);
   app.use('/api', paths);
   var server = app.listen(app.get('port'), function() {

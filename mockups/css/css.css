@@ -6,3 +6,23 @@ body, html {
 #right {
   height: 100%;
 }
+
+#sidebar {
+  height: 100%;
+  width: 200px;
+  float: left;
+  margin: 0 5px;
+}
+
+#mainarea {
+  width: 900px;
+  height: 100%;
+  margin: 0 auto;
+  float: left;
+}
+
+#chatsidebar {
+  height: 100%;
+  width: 200px;
+  float: right;
+}
