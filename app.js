@@ -17,7 +17,7 @@ app.get('/', function (req, res) {
   res.send('Hello World!')
 });
 
-models.sequelize.sync({force: true}).then(function () {
+models.sequelize.sync({force: false}).then(function () {
   var paths = routes.set(router, models);
   app.use('/api', paths);
   var server = app.listen(app.get('port'), function() {
