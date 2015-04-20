@@ -22,7 +22,7 @@ module.exports = function(sequelize, DataTypes) {
     classMethods: {
       associate: function(models) {
         Job.hasMany(models.Workorder);
-        Job.hasMany(models.Book);
+        Job.hasOne(models.Book, {as: 'selectedBook', foreignKey : 'BookId'});
         Job.hasOne(models.User, {as: 'userOwner', foreignKey : 'userOwnerId'});
       }
     }
