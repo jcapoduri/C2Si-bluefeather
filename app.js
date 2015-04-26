@@ -5,7 +5,7 @@ var bodyParser =    require('body-parser');
 var app = 		      express();
 var router =        express.Router();
 var models = 	      require("./models");
-var routeMaps  =    require('./routes');
+var controllers  =    require('./controllers');
 var Sequelize =     require("sequelize");
 var env       =     process.env.NODE_ENV || "development";
 var config    =     require(__dirname + '/config/config.json')[env];
@@ -25,7 +25,7 @@ models = models(sequelize);
 
 sequelize.sync({force: false}).then(function () {
   
-  var paths = routeMaps.set(router, models);
+  var paths = controllers.set(router, models);
   app.use('/api', paths);
 
   var server = app.listen(app.get('port'), function() {

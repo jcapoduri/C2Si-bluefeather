@@ -2,7 +2,7 @@
 
 var fs =    require("fs");
 var path =  require("path");
-var db =    {};
+var db =    [];
 
 fs
   .readdirSync(__dirname)
@@ -11,18 +11,16 @@ fs
   })
   .forEach(function(file) {
     var model = require(path.join(__dirname, file));
-    var modelname = file.split('.')[0];
-    db[modelname] = model;
+    db.push(model);
   });
 
-function setup(app, options) {
-  var item;
-      
-  for (item in db) {
-    if (item != "setup") db[item].set(app);
+module.exports.set = function (router, options) {
+  var i,
+      len = db.length;
+
+  for (i = 0; i < len; i++) {
+    db[i].set(router, options);
   };
+
+  return router;
 };
-
-db.setup = setup;
-
-module.exports = db;
