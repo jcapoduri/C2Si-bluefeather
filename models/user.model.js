@@ -12,13 +12,12 @@ module.exports = function(sequelize, DataTypes) {
     active: DataTypes.BOOLEAN,
     admin: DataTypes.BOOLEAN
   }, {
-    timestamps: false,
+    timestamps: true,
     paranoid: true,
     underscored: true,
     classMethods: {
       associate: function(models) {
         User.belongsTo(models.Job);
-        User.belongsToMany(models.Business, {through: 'BusinessUser'});
       }
     }
   });

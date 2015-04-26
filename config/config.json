@@ -7,9 +7,9 @@
     "dialect": "mysql"
   },
   "development": {
-    "username": "jcapoduri",
+    "username": "root",
     "password": "",
-    "database": "c9",
+    "database": "bluesystem",
     "host": "localhost",
     "dialect": "mysql"
   },

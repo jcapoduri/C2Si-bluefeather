@@ -2,9 +2,10 @@
 
 var fs        = require("fs");
 var path      = require("path");
-var db        = {};
 
-db.init = function(sequelize) {
+module.exports = function(sequelize) {
+  var db        = {};
+
   fs
     .readdirSync(__dirname)
     .filter(function(file) {
@@ -12,15 +13,15 @@ db.init = function(sequelize) {
     })
     .forEach(function(file) {
       var model = sequelize["import"](path.join(__dirname, file));
-      this[model.name] = model;
+      db[model.name] = model;
     }.bind(this));
   
   Object.keys(db).forEach(function(modelName) {
-    if ("associate" in this[modelName]) {
-      this[modelName].associate(db);
+    if ("associate" in db[modelName]) {
+      db[modelName].associate(db);
     }
   });  
-  
-};
 
-module.exports = db;
+  return db;
+  
+};;

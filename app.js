@@ -20,12 +20,16 @@ app.get('/', function (req, res) {
   res.send('Hello World!');
 });
 
-models.init(sequelize);
+// init models
+models = models(sequelize);
 
 sequelize.sync({force: false}).then(function () {
+  
   var paths = routeMaps.set(router, models);
   app.use('/api', paths);
+
   var server = app.listen(app.get('port'), function() {
     console.log('Express server listening on port ' + server.address().port);
   });
+
 });
