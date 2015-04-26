@@ -1,9 +1,9 @@
 {
   "test": {
-    "username": "shaka",
-    "password": "abcd1234",
-    "database": "shaka_bluesystem",
-    "host": "c2si.com.ar",
+    "username": "jcapoduri",
+    "password": "",
+    "database": "test",
+    "host": "localhost",
     "dialect": "mysql"
   },
   "development": {

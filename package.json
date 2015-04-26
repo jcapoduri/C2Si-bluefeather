@@ -13,9 +13,13 @@
     "sequelize": "^2.0.0-rc1",
     "sequelize-cli": "^0.3.0",
     "body-parser": ">1.0.0",
-    "less": ">2.0.0",
-    "grunt": ">=0.4.5",
     "backbone.marionette": ">=2.4.0",
     "underscore": ">1.8.0"
+  },
+  "devDependencies": {
+    "less": ">2.0.0",
+    "grunt": ">=0.4.5",
+    "mocha": ">=2.2.0",
+    "should": ">=6.0.0"
   }
 }
