@@ -4,12 +4,12 @@ var express = 	    require('express');
 var bodyParser =    require('body-parser');
 var app = 		      express();
 var router =        express.Router();
-var models = 	      require("./models");
 var controllers  =    require('./controllers');
 var Sequelize =     require("sequelize");
 var env       =     process.env.NODE_ENV || "development";
 var config    =     require(__dirname + '/config/config.json')[env];
 var sequelize =     new Sequelize(config.database, config.username, config.password, config);
+var models =        require("./models")(sequelize);
 
 app.set('port', process.env.PORT || 3000);
 
@@ -19,9 +19,6 @@ app.use(bodyParser.json());
 app.get('/', function (req, res) {
   res.send('Hello World!');
 });
-
-// init models
-models = models(sequelize);
 
 sequelize.sync({force: false}).then(function () {
   
