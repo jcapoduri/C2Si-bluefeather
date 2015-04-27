@@ -1,0 +1,1 @@
+define(['fee.controller'], function () {});
