@@ -1,1 +1,0 @@
-define(['fee.resource'], function () {});
