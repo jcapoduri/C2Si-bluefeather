@@ -1,6 +1,6 @@
-define(["angular"], function (angular) {
-    angular.module("bluesystem.controllers")
-    .conrtoller("feeCtrl",['$scope', function($scope) {
+;(function (angular) {
+    angular.module("bluefeather.features.fee")
+    .controller("feeCtrl",['$scope', function($scope) {
       $scope.greeting = 'Hola!';
     }]);
-});
+})(angular);
