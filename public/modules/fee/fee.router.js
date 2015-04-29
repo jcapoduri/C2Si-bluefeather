@@ -3,8 +3,12 @@
       .config([ "$routeProvider", function ($routeProvider) {
         $routeProvider.
               when('/fees', {
-                templateUrl: 'modules/fee/fee.partial.html',
-                controller: 'feeCtrl'
-              });  
+                templateUrl: 'modules/fee/fee.edit.partial.html',
+                controller: 'feeEditCtrl'
+              }).
+              when('/fees/list', {
+                templateUrl: 'modules/fee/fee.list.partial.html',
+                controller: 'feeListCtrl'
+              });
       }]);
 })(angular);
