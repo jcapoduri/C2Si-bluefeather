@@ -1,0 +1,18 @@
+html {
+   height: 100%;
+   max-width: 100%; 
+}
+
+body {
+    height: 100%;
+    max-width: 100%;
+    
+    aside {
+        width: @main-aside-percentage;
+        max-width: @main-aside-max-width;
+        float: left;
+        ~ section {
+            width: 100% - @main-aside-percentage;
+        }   
+    }
+}
