@@ -1,3 +1,5 @@
+var _ = require('underscore');
+
 module.exports.set = function (router, models) {
   router.get('/fee', function (req, res) {
     var feeModel = models.Fee;
