@@ -25,6 +25,7 @@ var oneDay = 86400000;
 
 //serve public folder
 app.use('/', express.static(__dirname + '/public', { maxAge: oneDay }));
+app.use('/mockups', express.static(__dirname + '/mockups', { maxAge: oneDay }));
 
 //setting up sequelizer (orm)
 sequelize.sync({force: false}).then(function () {
