@@ -4,10 +4,9 @@ module.exports = function(sequelize, DataTypes) {
   var Workorder = sequelize.define("Workorder", {    
     state: DataTypes.ENUM('Waiting', 'Fotocopiando', 'Anillando', 'Finished', 'Delivered', 'Recycled'),
     howTo: DataTypes.ENUM('TwoinOneDF', 'TwoinOneSF', 'toDF', 'toSF', 'HHDF', 'HHSF', 'likeThat'),
-    ringing: DataTypes.ENUM('top', 'side', 'bottom'),
+    ringing: DataTypes.ENUM('nope', 'top', 'side', 'bottom'),
     copies: DataTypes.INTEGER,
     withRinging: DataTypes.BOOLEAN,
-    doComplete: DataTypes.BOOLEAN,
     isLista: DataTypes.BOOLEAN,
     deadline: DataTypes.DATE,
 
