@@ -1,62 +1,100 @@
-<div class="row">
-  <div class="col-md-7">
-    <form class="form-inline">
-      <div class="form-group">
-        <label for="inputEmail3">Trabajo:</label>
-        <select class="form-control" for="inputEmail3">
-          <option value="fromClient">Libro del cliente</option>
-          <option value="fromFile">Archivo</option>
-          <option value="fromList">Lista</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label class="sr-only" for="exampleInputPassword3">Password</label>
-        <input type="password" class="form-control" id="exampleInputPassword3" placeholder="Password">
-      </div>
-    </form>
-    <form class="form-inline">
-      <div class="form-group">
-        <label for="inputEmail3">Como:</label>
-        <select class="form-control">
-          <option value="fromClient">Como esta</option>
-          <option value="fromFile">2 en 1 doble faz</option>
-          <option value="fromFile">2 en 1 simple faz</option>
-          <option value="fromList">H/H doble faz</option>
-          <option value="fromList">H/H simple faz</option>
-          <option value="fromList">pasar a doble faz</option>
-          <option value="fromList">pasar a simple faz</option>
-        </select>
-      </div>
-    </form>
-  </div>
-  <div class="col-md-5">
-    <form class="form-inline">
-      <div class="form-group">
-        <label for="inputEmail3">Trabajo:</label>
-        <select class="form-control" for="inputEmail3">
-          <option value="fromClient">Libro del cliente</option>
-          <option value="fromFile">Archivo</option>
-          <option value="fromList">Lista</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label class="sr-only" for="exampleInputPassword3">Password</label>
-        <input type="password" class="form-control" id="exampleInputPassword3" placeholder="Password">
-      </div>
-    </form>
-    <form class="form-inline">
-      <div class="form-group">
-        <label for="inputEmail3">Como:</label>
-        <select class="form-control">
-          <option value="fromClient">Como esta</option>
-          <option value="fromFile">2 en 1 doble faz</option>
-          <option value="fromFile">2 en 1 simple faz</option>
-          <option value="fromList">H/H doble faz</option>
-          <option value="fromList">H/H simple faz</option>
-          <option value="fromList">pasar a doble faz</option>
-          <option value="fromList">pasar a simple faz</option>
-        </select>
-      </div>
-    </form>
-  </div>
+<div class="col-md-6">
+  <dl class="form">
+    <dt>
+      <label>Trabajo:</label>
+    </dt>
+    <dd>
+      <select class="form-control">
+        <option value="fromClient">Libro del cliente</option>
+        <option value="fromFile">Archivo</option>
+        <option value="fromList">Lista</option>
+      </select>
+      <input type="text" class="form-control" placeholder="Nombre...">
+    </dd>
+    <dt>
+      <label>Como:</label>
+    </dt>
+    <dd>
+      <select class="form-control">
+        <option value="fromClient">Libro del cliente</option>
+        <option value="fromFile">Archivo</option>
+        <option value="fromList">Lista</option>
+      </select>
+    </dd>
+    <dt>
+      <label>Completo:</label>
+    </dt>
+    <dd>
+      <input type="checkbox">
+    </dd>
+    <dt>
+      <label>Paginas:</label>
+    </dt>
+    <dd>
+      <input type="text" class="form-control" placeholder="Nombre...">
+    </dd>
+    <dt>
+      <label>Observaciones:</label>
+    </dt>
+    <dd>
+      <textarea class="form-control"></textarea>
+    </dd>
+  </dl>           
+</div>
+<div class="col-md-6">
+  <dl class="form">
+    <dt>
+      <label>Estado:</label>
+    </dt>
+    <dd>
+      <select class="form-control">
+        <option value="fromClient">Creado</option>
+        <option value="fromFile">Fotocopiando</option>
+        <option value="fromList">Anillado</option>
+        <option value="fromList">Completo</option>
+        <option value="fromList">Entregado</option>
+        <option value="fromList">Reciclado</option>
+      </select>
+    </dd>
+    <dt>
+      <label>Ignorar:</label>
+    </dt>
+    <dd>
+      <input type="checkbox">
+    </dd>
+    <dt>
+      <label></label>
+    </dt>
+    <dd>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Desc.</th>
+            <th>Costo</th>
+            <th>Cantidad</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Doble faz</td>
+            <td>0.65</td>
+            <td>15</td>
+            <td>18.85</td>
+          </tr>
+        </tbody>
+      </table>
+    </dd>                         
+    <dt>
+      <label>Paginas:</label>
+    </dt>
+    <dd>
+      <input type="text" class="form-control" placeholder="Nombre...">
+    </dd>              
+  </dl>           
+</div>
+<div class="pull-right">
+  <button class="btn btn-default" type="submit">Guardar</button>
+  <button class="btn btn-default" type="submit">Descartar</button>
+  <button class="btn btn-primary" type="submit">Save</button>
 </div>
