@@ -10,7 +10,6 @@
       };
       
       $scope.save = function () {
-        debugger;
         $scope.model.$save(function () {
           $location.path("/fee/list");
         });

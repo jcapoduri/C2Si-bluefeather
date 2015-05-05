@@ -4,7 +4,8 @@
             "bluefeather.features.fee",
             "bluefeather.features.workorder",
             "bluefeather.features.request",
-            "bluefeather.features.dashboard"
+            "bluefeather.features.dashboard",
+            "bluefeather.shared.resource"
         ])
         .config(['$routeProvider',
           function($routeProvider) {
