@@ -7,7 +7,6 @@ module.exports.set = function (router, models) {
       var result = _.map(fee, function(item) {
         return item.toJSON();
       });
-      result.push(feeModel.create());
       res.json(result);
     });
   });

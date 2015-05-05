@@ -2,21 +2,24 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     less: {
-      development: {
+      dev: {
         options: {
           compress: true,
-          yuicompress: true
+          yuicompress: true,
+          optimization: 2
         },
         files: {
-          "public/css/style.css": "public/less/base.less" // destination file and source file
+          "./public/css/style.css": "./public/less/base.less" // destination file and source file
         }
       }
     },
     watch: {
-      files: ['public/less/*.less'], // which files to watch
-      tasks: ['less'],
-      options: {
-        nospawn: true
+      less: {
+        files: ['../less/{,*/}*.less'],
+        tasks: ['less:dev'],
+        options: {
+          nospawn: true
+        }
       }
     }
   });
@@ -28,5 +31,5 @@ module.exports = function(grunt) {
 
   // Default task(s).
   grunt.registerTask('default', ['less']);
-  grunt.registerTask('watch', ['less', 'watch']);
+  grunt.registerTask('watch', ['less', 'watch:less']);
 };

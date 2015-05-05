@@ -4,11 +4,13 @@
             <th>Tipo</th>
             <th>Descripcion</th>
             <th>Precio</th>
+            <th>&nbps;</th>
         </thead>
         <tbody ng-repeat="fee in fees">
-            <td>{{type}}</td>
-            <td>{{description}}</td>
-            <td>{{price}}</td>
+            <td>{{fee.id}}</td>
+            <td>{{fee.description}}</td>
+            <td>{{fee.price}}</td>
+            <td><a ng-href="#/fee/{{fee.id}}"><span class="glyphicon glyphicon-edit"></span></a></td>
         </tbody>
     </table>
 </setion>

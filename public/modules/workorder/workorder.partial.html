@@ -4,7 +4,7 @@
       <label>Trabajo:</label>
     </dt>
     <dd>
-      <select class="form-control">
+      <select class="form-control" ng-model="inputFrom">
         <option value="fromClient">Libro del cliente</option>
         <option value="fromFile">Archivo</option>
         <option value="fromList">Lista</option>
@@ -15,7 +15,7 @@
       <label>Como:</label>
     </dt>
     <dd>
-      <select class="form-control">
+      <select class="form-control" ng-model="howTo">
         <option value="fromClient">Libro del cliente</option>
         <option value="fromFile">Archivo</option>
         <option value="fromList">Lista</option>
@@ -25,19 +25,19 @@
       <label>Completo:</label>
     </dt>
     <dd>
-      <input type="checkbox">
+      <input type="checkbox" ng-model="doComplete">
     </dd>
     <dt>
       <label>Paginas:</label>
     </dt>
     <dd>
-      <input type="text" class="form-control" placeholder="Nombre...">
+      <input type="text" class="form-control" placeholder="Nombre..." ng-model="pages">
     </dd>
     <dt>
       <label>Observaciones:</label>
     </dt>
     <dd>
-      <textarea class="form-control"></textarea>
+      <textarea class="form-control" ng-model="observation"></textarea>
     </dd>
   </dl>           
 </div>
@@ -47,7 +47,7 @@
       <label>Estado:</label>
     </dt>
     <dd>
-      <select class="form-control">
+      <select class="form-control" ng-model="state">
         <option value="fromClient">Creado</option>
         <option value="fromFile">Fotocopiando</option>
         <option value="fromList">Anillado</option>
@@ -60,7 +60,7 @@
       <label>Ignorar:</label>
     </dt>
     <dd>
-      <input type="checkbox">
+      <input type="checkbox" ng-model="ignore">
     </dd>
     <dt>
       <label></label>

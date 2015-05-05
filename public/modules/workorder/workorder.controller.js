@@ -1,9 +1,21 @@
 ;(function (angular) {
     angular.module("bluefeather.features.workorder")
     
-    .controller("requestEditCtrl",['$scope', function($scope) {
-      $scope.greeting = 'Hola!';
-    }])
+    .controller("workorderEditCtrl",['$scope', function($scope) {
+      $scope.inputFrom = "fromClient";
+      $scope.state = 'Waiting';
+      $scope.howTo = 'likeThat';
+      $scope.ringing = 'nope';
+      $scope.copies = 1;
+      $scope.doComplete =  true;
+      $scope.pages =  "";
+      $scope.observation =  "";
+      $scope.ignore =  false;
+      $scope.isLista = false;
+      $scope.deadline = new Date();
+      $scope.senna = 0.0;
+      $scope.total = 0.0;
+    }]);
     
     
 })(angular);

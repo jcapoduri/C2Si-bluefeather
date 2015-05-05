@@ -1,23 +1,18 @@
 ;(function (angular) {
     angular.module("bluefeather.features.request")
     
-    .controller("requestEditCtrl",['$scope', function($scope) {
-      $scope.greeting = 'Hola!';
-      $scope.workorders = [{    
-        state: 'Waiting',
-        howTo: 'likeThat',
-        ringing: 'nope',
-        copies: 1,
-        isLista: false,
-        deadline: new Date(),
-        senna: 0.0,
-        total: 0.0
-      }];
+    .controller("requestEditCtrl",['$scope', 'requestResource', 'workorderResource', function($scope, Request, Workorder) {
+      $scope.client = 'Jorge';
+      $scope.deadline = new Date();
+      $scope.workorders = [];
+      $scope.workorders.push(new Workorder());
+      $scope.model = new Request();
+      $scope.addWorkorder = function () {
+        $scope.workorders.push(new Workorder());
+      };
     }])
 
-    .controller("requestCtrl",['$scope', function($scope) {
+    .controller("requestCtrl", ['$scope', 'requestResource', function($scope, Request) {
       $scope.greeting = 'Hola!';
-    }])
-    
-    
+    }]);
 })(angular);
