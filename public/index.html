@@ -4,8 +4,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>todos</title>
+    <title>Casita Azul</title>
 
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,700,600' rel='stylesheet' type='text/css'>
     <!-- Bootstrap -->
     <link href="vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="css/style.css" rel="stylesheet" type="text/css">
@@ -41,8 +42,8 @@
     <script type="text/javascript" src="app.js"></script>
   </head>
   <body>
-    <nav class="navbar navbar-default" role="navigation" ng-include="'modules/shared/header/header.partial.html'">
-    </nav>
-    <div ng-view></div>
+    <aside role="navigation" ng-include="'modules/shared/sidebar/sidebar.partial.html'">
+    </aside>
+    <section ng-view></section>
   </body>
 </html>

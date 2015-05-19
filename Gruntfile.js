@@ -4,6 +4,16 @@ module.exports = function(grunt) {
     less: {
       dev: {
         options: {
+          compress: false,
+          yuicompress: false,
+          optimization: 2
+        },
+        files: {
+          "./public/css/style.css": "./public/less/base.less" // destination file and source file
+        }
+      },
+      prod: {
+        options: {
           compress: true,
           yuicompress: true,
           optimization: 2
@@ -18,7 +28,8 @@ module.exports = function(grunt) {
         files: ['../less/{,*/}*.less'],
         tasks: ['less:dev'],
         options: {
-          nospawn: true
+          nospawn: true,
+          event: ["added", "deleted", "changed"]
         }
       }
     }
@@ -30,6 +41,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
 
   // Default task(s).
-  grunt.registerTask('default', ['less']);
-  grunt.registerTask('watch', ['less', 'watch:less']);
+  grunt.registerTask('default', ['less:dev']);
+  grunt.registerTask('watch', ['less::dev', 'watch:less']);
 };
