@@ -17,6 +17,4 @@
       $scope.total = 0.0;
       $scope.charges = [];
     }]);
-    
-    
 })(angular);
