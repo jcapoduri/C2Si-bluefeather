@@ -10,9 +10,5 @@
       $scope.addWorkorder = function () {
         $scope.workorders.push(new Workorder());
       };
-    }])
-
-    .controller("requestCtrl", ['$scope', 'requestResource', function($scope, Request) {
-      $scope.greeting = 'Hola!';
     }]);
 })(angular);

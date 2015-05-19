@@ -1,7 +1,7 @@
 ;(function (angular) {
     angular.module("bluefeather.features.workorder")
     
-    .controller("workorderEditCtrl",['$scope', function($scope) {
+    .controller("workorderEditCtrl",['$scope', 'feeResource', function($scope, Fee) {
       $scope.inputFrom = "fromClient";
       $scope.state = 'Waiting';
       $scope.howTo = 'likeThat';
@@ -15,6 +15,7 @@
       $scope.deadline = new Date();
       $scope.senna = 0.0;
       $scope.total = 0.0;
+      $scope.charges = [];
     }]);
     
     

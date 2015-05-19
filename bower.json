@@ -7,6 +7,8 @@
     "bootstrap": "~3.0.0",
     "angular-route": "latest",
     "angular-resource": "latest",
-    "components-font-awesome": "latest"
+    "components-font-awesome": "latest",
+    "angular-loading-bar": "latest",
+    "angular-animate": "latest"
   }
 }

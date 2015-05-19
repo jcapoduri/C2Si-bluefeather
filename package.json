@@ -16,7 +16,7 @@
     "body-parser": ">1.0.0",    
     "underscore": ">1.8.0",
     "node-webkit-builder": "~0.1.4",
-    "nodewebkit": "0.10.5"
+    "nodewebkit": "0.10.5",
   },
   "devDependencies": {
     "less": ">2.0.0",
@@ -33,6 +33,7 @@
     "grunt-usemin": "~2.0.2",
     "grunt-contrib-copy": "~0.5.0",
     "grunt-rev": "~0.1.0",
-    "grunt-contrib-clean": "~0.5.0"
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-include-source": "latest"
   }
 }

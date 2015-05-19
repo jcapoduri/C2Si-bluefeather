@@ -1,11 +1,11 @@
 #!/usr/bin/env node
-var _ = require('underscore');
+var _ =             require('underscore');
 var express = 	    require('express');
 var bodyParser =    require('body-parser');
 var app = 		      express();
 var router =        express.Router();
 var compression =   require('compression')
-var controllers  =    require('./controllers');
+var controllers  =  require('./controllers');
 var Sequelize =     require("sequelize");
 var env       =     process.env.NODE_ENV || "development";
 var config    =     require(__dirname + '/config/config.json')[env];
