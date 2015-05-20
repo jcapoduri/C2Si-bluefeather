@@ -1,0 +1,10 @@
+<setion ng-controller="chargeListCtrl">
+    <ng-repeat="charge in $scope">
+        <section ng-controller="chargeEditCtrl">
+            <select ng-model="charge.fee" ng-options="item.id as item.description for item in fees"></select>
+            <input type="number" name="" ng-model="charge.quantity" />
+            <label ng-bind="" for=""></label>
+        </section>
+    </ng-repeat>
+    <button ng-click="addCharge()">Agregar</button>
+</setion>
