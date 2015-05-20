@@ -15,6 +15,8 @@
       $scope.deadline = new Date();
       $scope.senna = 0.0;
       $scope.total = 0.0;
-      $scope.charges = [];
+      $scope.charges = [{
+        "quantity": 3
+      }];
     }]);
 })(angular);
