@@ -5,11 +5,10 @@
       return {
         restrict: 'A', // only activate on element attribute
         templateUrl: 'modules/charge/charge.list.partial.html',
+        controller: 'chargeListCtrl',
         scope: {
           charges: '='
-        },
-        bindToController: true,
-        controller: 'chargeListCtrl'
+        }
       }
     });
 })(angular);
