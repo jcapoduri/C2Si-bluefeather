@@ -1,9 +1,7 @@
-<setion>
+<setion ng-cloak="loading">
     <div class="form-inline" ng-repeat="charge in charges">
         <section ng-controller="chargeEditCtrl">
-            <select class="form-control" ng-model="charge.fee" ng-options="item.id as item.description for item in fees"></select>
-            <input class="form-control" type="number" name="" ng-model="charge.quantity" />
-            <label ng-bind="" for=""></label>
+            <bf-charge charge="charge" fees="fees"></bf-charge>
         </section>
     </div ng-repeat>
     <button class="btn btn-default" ng-click="addCharge()">Agregar</button>

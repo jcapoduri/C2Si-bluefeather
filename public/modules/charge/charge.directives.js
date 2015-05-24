@@ -10,5 +10,17 @@
           charges: '='
         }
       }
+    })
+
+    .directive("bfCharge", function() {
+      return {
+        restrict: 'EA', // only activate on element attribute
+        templateUrl: 'modules/charge/charge.partial.html',
+        controller: 'chargeEditCtrl',
+        scope: {
+          charge: '=',
+          fees: '='
+        }
+      }
     });
 })(angular);

@@ -1,5 +1,3 @@
-<section ng-controller="chargeEditCtrl">
-    <select ng-model="" ng-options=""></select>
-    <input type="number" name="" ng-model="" />
-    <label ng-bind="" for=""></label>
-</section>
+<select class="form-control" ng-model="charge.fee" ng-options="item as item.description for item in fees"></select>
+<input class="form-control" type="number" name="" ng-model="charge.quantity" />
+<label>{{cost()}}</label>
