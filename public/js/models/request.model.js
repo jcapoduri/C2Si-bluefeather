@@ -1,13 +1,12 @@
-define(['backbone'], function (Backbone) {
+define(['backbone', 
+        'models/workorder.collection'], 
+  function (Backbone, workorderCollection) {
   return Backbone.Model.extend({
     url: 'api/request',
     defaults: {
-      description: '',  
-      title: '',
-      done: false,
-      ignore: false,
+      client: '',  
       deliveryDate: new Date(),
-      kind: 'lista'
+      workorders: new workorderCollection()
     }
   });
 });
