@@ -9,10 +9,7 @@ define([
     return Marionette.LayoutView.extend({
       template: _.template(tpl),
       regions: {
-        'workorders': {
-          selector: 'div#workorderRegion',
-          class: collectionView
-        }
+        workorders: "#workorderRegion"
       },
       model: new requestModel(),
       ui: {
@@ -32,7 +29,7 @@ define([
       },
       addNew: function(evt) {
         var orders = this.model.get('workorders');
-        orders.create({});
+        //orders.create({});
       },
       onBeforeShow: function () {
         this.showChildView('workorders', new collectionView({model: this.model.get('workorders')}));
