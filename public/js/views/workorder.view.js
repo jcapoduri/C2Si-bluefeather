@@ -10,10 +10,8 @@ define([
     return Marionette.ItemView.extend({
       template: _.template(tpl),
       model: new workorderModel(),
-      regions: {
-        "workorders": "#workorderRegion"
-      },
       initialize: function (opts) {
+        debugger;
         if (!!opts.model)
           this.model = opts.model;
       }

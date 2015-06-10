@@ -11,10 +11,10 @@ define([
     return Marionette.CollectionView.extend({
       template: _.template(tpl),
       childView: workorderView,
-      collection: workorderCollection,
+      //collection: workorderCollection,
       initialize: function (options) {
         if (!!options.model)
-          this.model = options.model;
+          this.collection = options.model;
       }
     });
   });
