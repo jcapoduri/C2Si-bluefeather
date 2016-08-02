@@ -1,0 +1,24 @@
+<section>
+    <dl class="form">
+        <dt>
+          <label>Descripcion:</label>
+        </dt>
+        <dd>
+          <input ng-model="model.description" type="text" class="form-control" id="inputFeeDescription" placeholder="Description ...">
+        </dd>
+        <dt>
+          <label>Precio: </label>
+        </dt>
+        <dd class="form-group">
+            <input ng-model="model.price" type="number" class="form-control" id="inputFeeDescription" placeholder="Precio unitario ...">
+        </dd>
+        <dt>
+          <label>No Usar: </label>  
+        </dt>
+        <dd class="form-group checkbox">
+            <input ng-model="model.doNotUse" type="checkbox" class="form-control" id="inputFeeDescription" placeholder="Precio unitario ...">
+        </dd>
+        <dt></dt>
+        <dd><button class="btn btn-default" ng-click="save()">Guardar</button></dd>
+    </dl>
+</section>

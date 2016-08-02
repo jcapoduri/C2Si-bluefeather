@@ -1,0 +1,8 @@
+<setion ng-cloak="loading">
+    <div class="form-inline" ng-repeat="charge in charges">
+        <section ng-controller="chargeEditCtrl">
+            <bf-charge charge="charge" fees="fees"></bf-charge>
+        </section>
+    </div ng-repeat>
+    <button class="btn btn-default" ng-click="addCharge()">Agregar</button>
+</setion>

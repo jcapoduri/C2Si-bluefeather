@@ -10,7 +10,7 @@ var Q = require('q');
 
 var paths = {
     scripts: ['app/**/*.js', '!app/vendors/**/*'],
-    styles: ['./app/**/*.css', './app/**/*.scss'],
+    styles: ['./app/less/base.less'],
     images: './images/**/*',
     index: './app/index.html',
     partials: ['app/**/*.html', '!app/index.html'],
@@ -103,14 +103,14 @@ pipes.scriptedPartials = function() {
 
 pipes.builtStylesDev = function() {
     return gulp.src(paths.styles)
-        .pipe(plugins.sass())
+        .pipe(plugins.less())
         .pipe(gulp.dest(paths.distDev));
 };
 
 pipes.builtStylesProd = function() {
     return gulp.src(paths.styles)
         .pipe(plugins.sourcemaps.init())
-            .pipe(plugins.sass())
+            .pipe(plugins.less())
             .pipe(plugins.minifyCss())
         .pipe(plugins.sourcemaps.write())
         .pipe(pipes.minifiedFileName())

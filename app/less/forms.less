@@ -1,0 +1,41 @@
+form {
+  input, select {
+    width: auto;
+  } 
+
+  .form-inline > .form-group{
+    width: 100%;
+  }
+}
+
+dl.form {
+  dt , dd {
+    display: inline-block;
+    margin-bottom: @form-margin-between-control-line;
+    min-height: 15px;
+    vertical-align: top;
+  }
+
+  input, select {
+    display: inline-block;
+    width: auto;
+  }
+
+  input[type="checkbox"] {
+    margin-top: 10px;
+  }
+
+  dt {
+    width: @form-label-column;
+    text-align: right;
+
+    label {
+      margin-top: 5px;
+    }
+  }
+
+  dd {
+    width: @form-control-column;
+    text-align: left;
+  }
+}
